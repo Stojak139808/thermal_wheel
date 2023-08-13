@@ -6,7 +6,7 @@ void setup_gpio(){
     DDRB = DDRB_COFIG;
     DDRC = DDRC_COFIG;
     DDRD = DDRD_COFIG;
-    PORTB = 0x0;
-    PORTC = 0x0;
-    PORTD = 0x0;
+    PORTB = 0x00u;
+    PORTC = 0x00u;
+    PORTD = 0x00u;
 }
