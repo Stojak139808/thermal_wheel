@@ -10,7 +10,7 @@ enum pin_direction_enum{
 };
 
 #define PORTB_DIR_0 IN
-#define PORTB_DIR_1 IN
+#define PORTB_DIR_1 OUT         /* SMC / OC1A */
 #define PORTB_DIR_2 IN
 #define PORTB_DIR_3 IN
 #define PORTB_DIR_4 IN
