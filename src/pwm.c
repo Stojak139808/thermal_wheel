@@ -12,7 +12,7 @@ void init_pwm(){
     TCCR0A |= (0b10 << COM0A0) | (1 << WGM00) | (1 << WGM01) | (0b11 << COM0B0);
 
     /* Set prescaler to none */
-    TCCR0B |= 0b001 << CS00;
+    set_pwm_prescaler(PWM_OFF);
 }
 
 inline void set_pwm_prescaler(pwm_div_t prescale){

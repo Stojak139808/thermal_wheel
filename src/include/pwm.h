@@ -12,11 +12,11 @@ typedef enum {
 /* PWM prescalers */
 typedef enum {
     PWM_OFF,
-    NO_PRESCALE = 0b001,
-    DIV8,
-    DIV64,
-    DIV256,
-    DIV1024
+    PWM_NO_PRESCALE = 0b001,
+    PWM_DIV8,
+    PWM_DIV64,
+    PWM_DIV256,
+    PWM_DIV1024
 }pwm_div_t;
 
 void init_pwm(void);
