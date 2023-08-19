@@ -22,8 +22,8 @@ enum pin_direction_enum{
 #define PORTC_DIR_1 IN
 #define PORTC_DIR_2 IN
 #define PORTC_DIR_3 IN
-#define PORTC_DIR_4 OUT         /* SDA */
-#define PORTC_DIR_5 OUT         /* SCL */
+#define PORTC_DIR_4 IN         /* SDA */
+#define PORTC_DIR_5 IN         /* SCL */
 #define PORTC_DIR_6 IN
 #define PORTC_DIR_7 RESERVED
 
