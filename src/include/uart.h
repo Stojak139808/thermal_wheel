@@ -17,6 +17,11 @@ enum fifo_status{
     FIFO_SUCESS
 };
 
+enum uart_force{
+    UART_ALLOW_SKIP,
+    UART_FORCE
+};
+
 #define BAUD 115200u
 #define UBRR F_CPU/8u/BAUD-1
 #define RX_BUFF_SIZE 64u

@@ -22,7 +22,7 @@
     do { \
         if( DEBUG_TEST ){ \
             sprintf(debug_buffer, fmt, ##__VA_ARGS__); \
-            send_uart(debug_buffer, SEND_FORCE); \
+            send_uart(debug_buffer, UART_FORCE); \
         } \
     } while (0)
 
