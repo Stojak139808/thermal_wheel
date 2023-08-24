@@ -15,8 +15,12 @@ static void set_i2c_bitrate(uint8_t bitrate);
 static inline void i2c_wait_for_twint(void);
 
 void init_i2c(){
-    set_i2c_prescaler(I2C_DIV64);
-    set_i2c_bitrate(0xFFU);
+    set_i2c_prescaler(I2C_DIV16);
+    /*
+     * max allowed frequency for BMP280 is 3MHz, set it to 333kHz
+     * because max allowed speed for atmega328p is 400kHz
+     */
+    set_i2c_bitrate(0x01U);
 }
 
 void i2c_start(void){
