@@ -35,7 +35,6 @@ enum bmp280_standby_time {
     BMP280_STANDBY_4000MS
 };
 
-
 /* coefficient for pressure LPF, chapter 3.3.3 in documentation for reference */
 enum bmp280_filter_coefficient {
     BMP280_FILTER_OFF,
@@ -93,7 +92,7 @@ typedef struct {
     struct bmp280_calib_data calib_data;
 }bmp280_dev_t;
 
-void setup_bmp280_sensor(bmp280_dev_t * dev);
+void init_bmp280_sensor(bmp280_dev_t * dev);
 void bmp280_read_temperature(bmp280_dev_t * dev);
 void bmp280_read_pressure(bmp280_dev_t * dev);
 

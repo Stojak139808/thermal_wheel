@@ -2,7 +2,7 @@
 #include "include/mcu.h"
 #include <avr/io.h>
 
-void setup_gpio(){
+void init_gpio(){
     DDRB = DDRB_COFIG;
     DDRC = DDRC_COFIG;
     DDRD = DDRD_COFIG;

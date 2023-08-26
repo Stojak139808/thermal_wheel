@@ -82,7 +82,7 @@ ISR(USART_TX_vect){
     sei();
 }
 
-void setup_uart(){
+void init_uart(){
     UBRR0H = (uint8_t)((UBRR & 0x0f00) >> 8);
     UBRR0L = (uint8_t)((UBRR & 0x00ff));
     /* enable tx, rx and rx int */

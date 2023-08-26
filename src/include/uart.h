@@ -34,7 +34,7 @@ enum uart_force{
 #define DISABLE_TX_ISR()    UCSR0B &= ~(1 << TXCIE0)
 
 /* functions to use UART */
-void setup_uart(void);
+void init_uart(void);
 uint8_t read_uart_buff(char *destination);
 uint8_t send_uart(char* message, uint8_t force);
 uint8_t uart_rx_state(void);

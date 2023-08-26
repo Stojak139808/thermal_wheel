@@ -80,7 +80,7 @@ static void bmp280_read_calib_data(bmp280_dev_t * dev){
     dev->calib_data = redout;
 }
 
-void setup_bmp280_sensor(bmp280_dev_t * dev){
+void init_bmp280_sensor(bmp280_dev_t * dev){
 
     uint8_t reg = 0x0;
 

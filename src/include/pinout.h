@@ -36,8 +36,14 @@ enum pin_direction_enum{
 #define PORTD_DIR_6 OUT         /* PWM / OC0A */
 #define PORTD_DIR_7 IN
 
-#define DDRB_COFIG CAST_PINS_TO_UINT8(PORTB_DIR_0, PORTB_DIR_1, PORTB_DIR_2, PORTB_DIR_3, PORTB_DIR_4, PORTB_DIR_5, PORTB_DIR_6, PORTB_DIR_7)
-#define DDRC_COFIG CAST_PINS_TO_UINT8(PORTC_DIR_0, PORTC_DIR_1, PORTC_DIR_2, PORTC_DIR_3, PORTC_DIR_4, PORTC_DIR_5, PORTC_DIR_6, PORTC_DIR_7)
-#define DDRD_COFIG CAST_PINS_TO_UINT8(PORTD_DIR_0, PORTD_DIR_1, PORTD_DIR_2, PORTD_DIR_3, PORTD_DIR_4, PORTD_DIR_5, PORTD_DIR_6, PORTD_DIR_7)
+#define DDRB_COFIG CAST_PINS_TO_UINT8(PORTB_DIR_0, PORTB_DIR_1, PORTB_DIR_2, \
+                                      PORTB_DIR_3, PORTB_DIR_4, PORTB_DIR_5, \
+                                      PORTB_DIR_6, PORTB_DIR_7)
+#define DDRC_COFIG CAST_PINS_TO_UINT8(PORTC_DIR_0, PORTC_DIR_1, PORTC_DIR_2, \
+                                      PORTC_DIR_3, PORTC_DIR_4, PORTC_DIR_5, \
+                                      PORTC_DIR_6, PORTC_DIR_7)
+#define DDRD_COFIG CAST_PINS_TO_UINT8(PORTD_DIR_0, PORTD_DIR_1, PORTD_DIR_2, \
+                                      PORTD_DIR_3, PORTD_DIR_4, PORTD_DIR_5, \
+                                      PORTD_DIR_6, PORTD_DIR_7)
 
 #endif
