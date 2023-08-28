@@ -1,6 +1,4 @@
 #include "include/pinout.h"
-#include "include/mcu.h"
-#include <avr/io.h>
 
 void init_gpio(){
     DDRB = DDRB_COFIG;

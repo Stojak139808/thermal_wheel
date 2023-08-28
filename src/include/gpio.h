@@ -2,6 +2,7 @@
 #define GPIO_H
 
 #include <stdint.h>
+#include "pinout.h"
 
 void init_gpio();
 

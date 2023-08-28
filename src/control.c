@@ -42,7 +42,7 @@ ISR(TIMER2_OVF_vect){
 ISR(TIMER2_COMPA_vect){
     /* check number of overflows */
     if(config.timer_config.overflow_counter <
-       (config.timer_config.tickcount & 0xFF00U) >> 8){
+       (config.timer_config.tickcount & 0x00FF0000U) >> 16){
         return;
     }
 
