@@ -17,6 +17,10 @@ enum pin_direction_enum{
 #define IO_SMC_EN   PINB1
 #define IO_SMC_REG  PORTB
 
+#define IO_FAN_0    PORTD4
+#define IO_FAN_1    PORTD5
+#define IO_FAN_REG  PORTD
+
 #define PORTB_DIR_0 IN          /* Y DIR */
 #define PORTB_DIR_1 OUT         /* X EN */
 #define PORTB_DIR_2 IN          /* X CUR */
