@@ -18,7 +18,6 @@ struct timer_status {
 
 struct timer_status smc_config;
 
-
 /* ISR's for software PWM */
 ISR(TIMER1_OVF_vect){
     smc_config.overflow_counter++;
@@ -33,6 +32,8 @@ ISR(TIMER1_COMPA_vect){
 
     /* toggle motor STEP GPIO */
     IO_SMC_REG ^= (1 << IO_SMC_STEP);
+    TCNT1L = 0;
+    TCNT1H = 0;
 }
 
 void init_smc(){
@@ -46,8 +47,8 @@ void init_smc(){
 
     set_smc_direction(0);
 
-    /* set enable pin to 1 */
-    IO_SMC_REG |= (1 << IO_SMC_EN);
+    /* set enable pin to 0 */
+    IO_SMC_REG &= ~(1 << IO_SMC_EN);
 }
 
 void set_smc_prescaler(smc_div_t prescale){
@@ -57,7 +58,6 @@ void set_smc_prescaler(smc_div_t prescale){
     TCCR1B = tmp_TCCR1B | ((uint8_t)prescale << CS00);
 }
 
-
 void set_smc_period(uint32_t period){
 
     /* cap the value to 24bit */
@@ -65,6 +65,7 @@ void set_smc_period(uint32_t period){
         period = 0x00FFFFFFU;
     }
     smc_config.tickcount = period;
+    smc_config.overflow_counter = 0;
     cli();
     OCR1AH = (uint8_t)((period & 0xff00) >> 8);
     OCR1AL = (uint8_t)(period & 0x00ff);
