@@ -12,7 +12,7 @@ enum pin_direction_enum{
     OUT
 };
 
-#define IO_SMC_STEP PINB4
+#define IO_SMC_STEP PINB2
 #define IO_SMC_DIR  PINB5
 #define IO_SMC_EN   PINB1
 #define IO_SMC_REG  PORTB
@@ -22,10 +22,10 @@ enum pin_direction_enum{
 #define IO_FAN_REG  PORTD
 
 #define PORTB_DIR_0 IN          /* Y DIR */
-#define PORTB_DIR_1 OUT         /* X EN */
-#define PORTB_DIR_2 IN          /* X CUR */
+#define PORTB_DIR_1 OUT         /* X EN  */
+#define PORTB_DIR_2 OUT          /* X CUR / new step */
 #define PORTB_DIR_3 IN          /* Y CUR */
-#define PORTB_DIR_4 OUT         /* X STEP */
+#define PORTB_DIR_4 IN          /* X STEP / old step */
 #define PORTB_DIR_5 OUT         /* X DIR */
 #define PORTB_DIR_6 RESERVED
 #define PORTB_DIR_7 RESERVED
