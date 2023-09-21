@@ -23,7 +23,7 @@ enum pin_direction_enum{
 
 #define PORTB_DIR_0 IN          /* Y DIR */
 #define PORTB_DIR_1 OUT         /* X EN  */
-#define PORTB_DIR_2 OUT          /* X CUR / new step */
+#define PORTB_DIR_2 OUT         /* X CUR / new step */
 #define PORTB_DIR_3 IN          /* Y CUR */
 #define PORTB_DIR_4 IN          /* X STEP / old step */
 #define PORTB_DIR_5 OUT         /* X DIR */

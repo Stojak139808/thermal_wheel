@@ -15,7 +15,7 @@ typedef enum {
 
 void init_smc(void);
 void set_smc_prescaler(smc_div_t prescale);
-void set_smc_period(uint32_t period);
+void set_smc_period(uint16_t period);
 void set_smc_direction(uint8_t direction);
 
 #endif
