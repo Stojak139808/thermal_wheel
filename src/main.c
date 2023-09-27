@@ -81,9 +81,7 @@ static void init(){
     set_fan_dutycycle(FAN1, control_val.fan_1_duty_cycle);
 
     init_smc();
-    //IO_SMC_REG |= (1 << IO_SMC_EN);
     set_smc_prescaler(SMC_DIV1024);
-    //set_smc_period(0x0u);
     control_val.smc_period = 15;
 
     set_syscounter(3125, SYS_DIV1024); /* 200ms */
@@ -188,25 +186,6 @@ int main(){
     init();
 
     for(;;) {
-        /*
-        temperature = bmp280_get_temperature(&sensor0);
-        pressure = bmp280_get_pressure(&sensor0);
-        DEBUG("sensor 1: temp: %ld    press: %ld\n\r", temperature, pressure);
-
-        pressure = bmp280_get_pressure(&sensor1);
-        temperature = bmp280_get_temperature(&sensor1);
-        DEBUG("sensor 2: temp: %ld    press: %ld\n\r\n", temperature, pressure);
-
-        /* check if there is a message to process /
-
-        DEBUG("status counter: %ld\n\r", get_syscounter());
-        _delay_ms(1000);
-
-        set_fan_dutycycle(FAN0, duty_cycle);
-        set_fan_dutycycle(FAN1, UINT8_MAX - duty_cycle);
-
-        duty_cycle+=8;
-        */
         if(0 != uart_rx_state()) {
             read_uart_buff(message);
             process_message(message);
